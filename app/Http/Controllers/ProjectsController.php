@@ -23,6 +23,12 @@ class ProjectsController extends Controller
         return view('projects.show', compact('project'));
     }
 
+    /** @test */
+    public function create()
+    {
+        return view('projects.create');
+    }
+
     public function store(Request $request)
     {
         $attributes = $request->validate([
